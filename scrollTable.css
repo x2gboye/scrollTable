@@ -1,0 +1,132 @@
+/*---------------------------------------------------------------------------
+Base css
+---------------------------------------------------------------------------*/
+.ui-scrollTable {
+	position: relative; /* could be absolute or relative */
+}
+
+.ui-scrollTable-wrapper {
+	overflow-x: hidden;
+	overflow-y: auto;
+	height: 100%;
+}
+
+.ui-scrollTable-header,
+.ui-scrollTable-footer {
+	height: 38px; /* height of header/footer */
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+}
+
+.ui-scrollTable-footer {
+	top: auto;
+	bottom:0;
+}
+
+.ui-scrollTable table {
+	width: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+	border-collapse:separate; /* can't be set to collapse or headers/footers won't line up, sorry */
+	margin:0;	
+}
+
+.ui-scrollTable table > thead th,
+.ui-scrollTable table > tfoot td,
+.ui-scrollTable table > thead .th-inner,
+.ui-scrollTable table > tfoot .tf-inner {
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+}
+
+.ui-scrollTable table > thead th,
+.ui-scrollTable table > tfoot td {
+	border:0;
+	padding:0;
+	line-height:0;
+	height:0;
+}
+
+.ui-scrollTable table > thead .th-inner,
+.ui-scrollTable table > tfoot .tf-inner {
+	position: absolute;
+	top:0;
+	text-align:inherit;
+}
+
+.ui-scrollTable table > tfoot .tf-inner {
+	top:auto;
+	bottom:0;
+}
+
+
+/*---------------------------------------------------------------------------
+Edit borders, colors, cell-padding here
+---------------------------------------------------------------------------*/
+.ui-scrollTable-header,
+.ui-scrollTable table > thead .th-inner {
+	background: #fff;
+	background: -moz-linear-gradient(top,  #ffffff 0%, #e5e5e5 100%); /* FF3.6+ */
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%); /* Chrome10+,Safari5.1+ */
+	background: -ms-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #ffffff 0%,#e5e5e5 100%); /* W3C */
+}
+
+.ui-scrollTable-footer,
+.ui-scrollTable table > tfoot .tf-inner {
+	background: #f5f5f5;
+	font-weight:bold;
+}
+
+.ui-scrollTable-header {
+	border-bottom: 2px solid #ddd;
+}
+
+.ui-scrollTable-footer {
+	border-top: 2px solid #ddd;
+}
+
+.ui-scrollTable table > tbody td {
+	background:#fff;
+	border:none;
+	border-bottom: 1px solid #ddd;
+}
+
+.ui-scrollTable-bordered {
+	border:1px solid #ddd;
+}
+
+.ui-scrollTable .table-bordered {
+	border:0;
+}
+
+.ui-scrollTable .table-bordered > tbody td + td {
+	border-left: 1px solid #ddd;
+}
+
+.ui-scrollTable .table-bordered > thead .th-inner,
+.ui-scrollTable .table-bordered > tfoot .tf-inner {
+	border-left: 1px solid #ddd;
+}
+.ui-scrollTable  .table-bordered > thead tr th:first-child .th-inner,
+.ui-scrollTable  .table-bordered > tfoot tr td:first-child .tf-inner {
+	border-left: none;
+}
+
+/*---------------------------------------------------------------------------
+Header styles for jquery.tablesorter.js plugin
+---------------------------------------------------------------------------*/
+.ui-scrollTable table > thead th.tablesorter-header:hover {
+	cursor:pointer;
+}
+.ui-scrollTable table > thead th.tablesorter-header.tablesorter-headerDesc .tablesorter-header-inner .th-inner:after,
+.ui-scrollTable table > thead th.tablesorter-header.tablesorter-headerDesc .th-inner .tablesorter-header-inner:after {
+	content:" \25B4"; /*up arrow*/
+}
+.ui-scrollTable table > thead th.tablesorter-header.tablesorter-headerAsc .tablesorter-header-inner .th-inner:after,
+.ui-scrollTable table > thead th.tablesorter-header.tablesorter-headerAsc .th-inner .tablesorter-header-inner:after {
+	content:" \25BE"; /*down arrow*/
+}

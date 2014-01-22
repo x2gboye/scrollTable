@@ -1,0 +1,1090 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>scrollTable Example</title>
+    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="scrollTable.css" />
+    <style type="text/css">  
+	body {
+		font-family:arial;
+		margin:0;
+		padding: 20px;
+		background:#f7f7f7;
+	}
+	#controls {
+		margin-bottom:20px;
+	}
+	header .btn {
+		margin-top:30px;
+	}
+	.x1 {
+		width:50px;
+		text-align:center;
+	}
+	.x6 {
+		width:100px;
+		text-align:center;
+	}
+	.table {
+		font-size:12px;
+	}
+    </style>    
+</head>
+
+<body>
+
+<div id="controls">
+    <div id="methods" class="btn-group">
+        <button type="button" class="btn btn-default active">initiate</button>
+        <button type="button" class="btn btn-default">destroy</button>
+    </div>
+    <label>Show Rows: </label>
+    <div id="showRows" class="btn-group">
+    	<button type="button" class="btn btn-default">5</button>
+        <button type="button" class="btn btn-default">10</button>
+        <button type="button" class="btn btn-default active">100</button>
+    </div>
+
+    <button id="hideSidebar" type="button" class="btn btn-default">Show Sidebar</button>
+    
+    <button id="showHeader" type="button" class="btn btn-default">Hide Header</button>
+
+</div>
+
+    <header class="jumbotron">
+    	<a class="btn btn-primary btn-lg pull-right" href="https://github.com/x2gboye/scrollTable">Full Documentation</a>
+        <h1>ScrollTable</h1>        
+    </header>
+
+	<div class="row">
+		<aside class="col-md-4" style="display:none;">
+			<ul class="list-group">
+				<li class="list-group-item">Lorem ipsum dolor sit amet.</li>
+				<li class="list-group-item">Dignissimos, dolore modi ut maxime!</li>
+				<li class="list-group-item">Omnis aperiam vitae maxime dolores!</li>
+				<li class="list-group-item">Quibusdam, accusantium deserunt molestias possimus.</li>
+			</ul>
+		</aside>
+		<article class="col-md-12">
+
+        <table cellspacing="0" class="table table-bordered table-hover" id="table">
+            <thead>
+                <tr>
+                    <th class="x1"><input type="checkbox" class="toggleAll" /></th>
+                    <th class="x2">First Name</th>
+                    <th class="x3">Last Name</th>
+                    <th class="x4">Email</th>
+                    <th class="x5">Website</th>
+                    <th class="x6"></th>
+                </tr>
+            </thead>
+            
+            <tfoot>
+            	<tr>
+                	<td class="x1"><input type="checkbox" class="toggleAll" /></th>
+                    <td class="x2" colspan="3">I have a colspan of 3</th>
+                    <td class="x5" colspan="2">Colspan 2</th>
+                </tr>
+            </tfoot>
+            
+            <tbody>
+			 
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Omar</td>
+                    <td class="x3">Bryant</td>
+                    <td class="x4">OmarBryant@email.com</td>
+                    <td class="x5">http://www.omarbryant.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Noel</td>
+                    <td class="x3">Thompson</td>
+                    <td class="x4">NoelThompson@email.com</td>
+                    <td class="x5">http://www.noelthompson.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Nate</td>
+                    <td class="x3">Clark</td>
+                    <td class="x4">NateClark@email.com</td>
+                    <td class="x5">http://www.nateclark.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Lee</td>
+                    <td class="x3">Murphy</td>
+                    <td class="x4">LeeMurphy@email.com</td>
+                    <td class="x5">http://www.leemurphy.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Rebekah</td>
+                    <td class="x3">Thompson</td>
+                    <td class="x4">RebekahThompson@email.com</td>
+                    <td class="x5">http://www.rebekahthompson.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Teresa</td>
+                    <td class="x3">Garcia</td>
+                    <td class="x4">TeresaGarcia@email.com</td>
+                    <td class="x5">http://www.teresagarcia.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Patty</td>
+                    <td class="x3">Murphy</td>
+                    <td class="x4">PattyMurphy@email.com</td>
+                    <td class="x5">http://www.pattymurphy.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Virginie</td>
+                    <td class="x3">Brooks</td>
+                    <td class="x4">VirginieBrooks@email.com</td>
+                    <td class="x5">http://www.virginiebrooks.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Teresa</td>
+                    <td class="x3">Simmons</td>
+                    <td class="x4">TeresaSimmons@email.com</td>
+                    <td class="x5">http://www.teresasimmons.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Jerry</td>
+                    <td class="x3">Diaz</td>
+                    <td class="x4">JerryDiaz@email.com</td>
+                    <td class="x5">http://www.jerrydiaz.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Jeanne</td>
+                    <td class="x3">Dixon</td>
+                    <td class="x4">JeanneDixon@email.com</td>
+                    <td class="x5">http://www.jeannedixon.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Sachiko</td>
+                    <td class="x3">Ellis</td>
+                    <td class="x4">SachikoEllis@email.com</td>
+                    <td class="x5">http://www.sachikoellis.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Edouard</td>
+                    <td class="x3">Brooks</td>
+                    <td class="x4">EdouardBrooks@email.com</td>
+                    <td class="x5">http://www.edouardbrooks.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Debby</td>
+                    <td class="x3">Morales</td>
+                    <td class="x4">DebbyMorales@email.com</td>
+                    <td class="x5">http://www.debbymorales.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Bret</td>
+                    <td class="x3">Diaz</td>
+                    <td class="x4">BretDiaz@email.com</td>
+                    <td class="x5">http://www.bretdiaz.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Gustav</td>
+                    <td class="x3">Daniels</td>
+                    <td class="x4">GustavDaniels@email.com</td>
+                    <td class="x5">http://www.gustavdaniels.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Hitomi</td>
+                    <td class="x3">Tucker</td>
+                    <td class="x4">HitomiTucker@email.com</td>
+                    <td class="x5">http://www.hitomitucker.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Virginie</td>
+                    <td class="x3">Ramos</td>
+                    <td class="x4">VirginieRamos@email.com</td>
+                    <td class="x5">http://www.virginieramos.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Irene</td>
+                    <td class="x3">Warren</td>
+                    <td class="x4">IreneWarren@email.com</td>
+                    <td class="x5">http://www.irenewarren.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Sebastien</td>
+                    <td class="x3">Ellis</td>
+                    <td class="x4">SebastienEllis@email.com</td>
+                    <td class="x5">http://www.sebastienellis.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Wilma</td>
+                    <td class="x3">Morales</td>
+                    <td class="x4">WilmaMorales@email.com</td>
+                    <td class="x5">http://www.wilmamorales.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Vicky</td>
+                    <td class="x3">Woods</td>
+                    <td class="x4">VickyWoods@email.com</td>
+                    <td class="x5">http://www.vickywoods.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Ivan</td>
+                    <td class="x3">Roberts</td>
+                    <td class="x4">IvanRoberts@email.com</td>
+                    <td class="x5">http://www.ivanroberts.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Philippe</td>
+                    <td class="x3">Murphy</td>
+                    <td class="x4">PhilippeMurphy@email.com</td>
+                    <td class="x5">http://www.philippemurphy.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Isaac</td>
+                    <td class="x3">Collins</td>
+                    <td class="x4">IsaacCollins@email.com</td>
+                    <td class="x5">http://www.isaaccollins.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Florence</td>
+                    <td class="x3">Lopez</td>
+                    <td class="x4">FlorenceLopez@email.com</td>
+                    <td class="x5">http://www.florencelopez.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Grace</td>
+                    <td class="x3">Graham</td>
+                    <td class="x4">GraceGraham@email.com</td>
+                    <td class="x5">http://www.gracegraham.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Sally</td>
+                    <td class="x3">Baker</td>
+                    <td class="x4">SallyBaker@email.com</td>
+                    <td class="x5">http://www.sallybaker.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Frances</td>
+                    <td class="x3">Hunt</td>
+                    <td class="x4">FrancesHunt@email.com</td>
+                    <td class="x5">http://www.franceshunt.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Chantal</td>
+                    <td class="x3">Diaz</td>
+                    <td class="x4">ChantalDiaz@email.com</td>
+                    <td class="x5">http://www.chantaldiaz.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Tanya</td>
+                    <td class="x3">James</td>
+                    <td class="x4">TanyaJames@email.com</td>
+                    <td class="x5">http://www.tanyajames.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Frances</td>
+                    <td class="x3">Reyes</td>
+                    <td class="x4">FrancesReyes@email.com</td>
+                    <td class="x5">http://www.francesreyes.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Juan</td>
+                    <td class="x3">Brooks</td>
+                    <td class="x4">JuanBrooks@email.com</td>
+                    <td class="x5">http://www.juanbrooks.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Emi</td>
+                    <td class="x3">Crawford</td>
+                    <td class="x4">EmiCrawford@email.com</td>
+                    <td class="x5">http://www.emicrawford.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Patty</td>
+                    <td class="x3">Woods</td>
+                    <td class="x4">PattyWoods@email.com</td>
+                    <td class="x5">http://www.pattywoods.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Otto</td>
+                    <td class="x3">Ortiz</td>
+                    <td class="x4">OttoOrtiz@email.com</td>
+                    <td class="x5">http://www.ottoortiz.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Vicky</td>
+                    <td class="x3">Garcia</td>
+                    <td class="x4">VickyGarcia@email.com</td>
+                    <td class="x5">http://www.vickygarcia.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Jose</td>
+                    <td class="x3">Marshall</td>
+                    <td class="x4">JoseMarshall@email.com</td>
+                    <td class="x5">http://www.josemarshall.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Tony</td>
+                    <td class="x3">Patterson</td>
+                    <td class="x4">TonyPatterson@email.com</td>
+                    <td class="x5">http://www.tonypatterson.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Itoe</td>
+                    <td class="x3">Ward</td>
+                    <td class="x4">ItoeWard@email.com</td>
+                    <td class="x5">http://www.itoeward.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Rita</td>
+                    <td class="x3">Ortiz</td>
+                    <td class="x4">RitaOrtiz@email.com</td>
+                    <td class="x5">http://www.ritaortiz.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Patty</td>
+                    <td class="x3">Williams</td>
+                    <td class="x4">PattyWilliams@email.com</td>
+                    <td class="x5">http://www.pattywilliams.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Kumiko</td>
+                    <td class="x3">Mason</td>
+                    <td class="x4">KumikoMason@email.com</td>
+                    <td class="x5">http://www.kumikomason.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Lili</td>
+                    <td class="x3">Murphy</td>
+                    <td class="x4">LiliMurphy@email.com</td>
+                    <td class="x5">http://www.lilimurphy.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Sally</td>
+                    <td class="x3">Jackson</td>
+                    <td class="x4">SallyJackson@email.com</td>
+                    <td class="x5">http://www.sallyjackson.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Tomas</td>
+                    <td class="x3">Hayes</td>
+                    <td class="x4">TomasHayes@email.com</td>
+                    <td class="x5">http://www.tomashayes.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Karen</td>
+                    <td class="x3">Ellis</td>
+                    <td class="x4">KarenEllis@email.com</td>
+                    <td class="x5">http://www.karenellis.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Youko</td>
+                    <td class="x3">Reyes</td>
+                    <td class="x4">YoukoReyes@email.com</td>
+                    <td class="x5">http://www.youkoreyes.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Iris</td>
+                    <td class="x3">Brooks</td>
+                    <td class="x4">IrisBrooks@email.com</td>
+                    <td class="x5">http://www.irisbrooks.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Florence</td>
+                    <td class="x3">White</td>
+                    <td class="x4">FlorenceWhite@email.com</td>
+                    <td class="x5">http://www.florencewhite.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Emily</td>
+                    <td class="x3">Phillips</td>
+                    <td class="x4">EmilyPhillips@email.com</td>
+                    <td class="x5">http://www.emilyphillips.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Chantal</td>
+                    <td class="x3">Palmer</td>
+                    <td class="x4">ChantalPalmer@email.com</td>
+                    <td class="x5">http://www.chantalpalmer.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Franklin</td>
+                    <td class="x3">Hamilton</td>
+                    <td class="x4">FranklinHamilton@email.com</td>
+                    <td class="x5">http://www.franklinhamilton.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Danny</td>
+                    <td class="x3">Smith</td>
+                    <td class="x4">DannySmith@email.com</td>
+                    <td class="x5">http://www.dannysmith.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Debby</td>
+                    <td class="x3">Washington</td>
+                    <td class="x4">DebbyWashington@email.com</td>
+                    <td class="x5">http://www.debbywashington.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Sandy</td>
+                    <td class="x3">Baker</td>
+                    <td class="x4">SandyBaker@email.com</td>
+                    <td class="x5">http://www.sandybaker.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Alex</td>
+                    <td class="x3">Jackson</td>
+                    <td class="x4">AlexJackson@email.com</td>
+                    <td class="x5">http://www.alexjackson.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Maria</td>
+                    <td class="x3">Price</td>
+                    <td class="x4">MariaPrice@email.com</td>
+                    <td class="x5">http://www.mariaprice.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Dolly</td>
+                    <td class="x3">Wallace</td>
+                    <td class="x4">DollyWallace@email.com</td>
+                    <td class="x5">http://www.dollywallace.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Arlene</td>
+                    <td class="x3">Lopez</td>
+                    <td class="x4">ArleneLopez@email.com</td>
+                    <td class="x5">http://www.arlenelopez.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Virginie</td>
+                    <td class="x3">Sanchez</td>
+                    <td class="x4">VirginieSanchez@email.com</td>
+                    <td class="x5">http://www.virginiesanchez.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Stan</td>
+                    <td class="x3">Collins</td>
+                    <td class="x4">StanCollins@email.com</td>
+                    <td class="x5">http://www.stancollins.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Danny</td>
+                    <td class="x3">Reynolds</td>
+                    <td class="x4">DannyReynolds@email.com</td>
+                    <td class="x5">http://www.dannyreynolds.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Bill</td>
+                    <td class="x3">Russell</td>
+                    <td class="x4">BillRussell@email.com</td>
+                    <td class="x5">http://www.billrussell.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Cindy</td>
+                    <td class="x3">Harris</td>
+                    <td class="x4">CindyHarris@email.com</td>
+                    <td class="x5">http://www.cindyharris.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Ivan</td>
+                    <td class="x3">Nelson</td>
+                    <td class="x4">IvanNelson@email.com</td>
+                    <td class="x5">http://www.ivannelson.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Gordon</td>
+                    <td class="x3">Baker</td>
+                    <td class="x4">GordonBaker@email.com</td>
+                    <td class="x5">http://www.gordonbaker.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Vince</td>
+                    <td class="x3">Henry</td>
+                    <td class="x4">VinceHenry@email.com</td>
+                    <td class="x5">http://www.vincehenry.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Miyuki</td>
+                    <td class="x3">Cruz</td>
+                    <td class="x4">MiyukiCruz@email.com</td>
+                    <td class="x5">http://www.miyukicruz.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Tanya</td>
+                    <td class="x3">Jenkins</td>
+                    <td class="x4">TanyaJenkins@email.com</td>
+                    <td class="x5">http://www.tanyajenkins.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Gaston</td>
+                    <td class="x3">Kelly</td>
+                    <td class="x4">GastonKelly@email.com</td>
+                    <td class="x5">http://www.gastonkelly.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Ana</td>
+                    <td class="x3">Gray</td>
+                    <td class="x4">AnaGray@email.com</td>
+                    <td class="x5">http://www.anagray.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Tomas</td>
+                    <td class="x3">Washington</td>
+                    <td class="x4">TomasWashington@email.com</td>
+                    <td class="x5">http://www.tomaswashington.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Miwa</td>
+                    <td class="x3">Flores</td>
+                    <td class="x4">MiwaFlores@email.com</td>
+                    <td class="x5">http://www.miwaflores.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Pablo</td>
+                    <td class="x3">Moore</td>
+                    <td class="x4">PabloMoore@email.com</td>
+                    <td class="x5">http://www.pablomoore.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Aki</td>
+                    <td class="x3">Owens</td>
+                    <td class="x4">AkiOwens@email.com</td>
+                    <td class="x5">http://www.akiowens.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Richard</td>
+                    <td class="x3">Hughes</td>
+                    <td class="x4">RichardHughes@email.com</td>
+                    <td class="x5">http://www.richardhughes.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Virginie</td>
+                    <td class="x3">Foster</td>
+                    <td class="x4">VirginieFoster@email.com</td>
+                    <td class="x5">http://www.virginiefoster.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Isabel</td>
+                    <td class="x3">Peterson</td>
+                    <td class="x4">IsabelPeterson@email.com</td>
+                    <td class="x5">http://www.isabelpeterson.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Rita</td>
+                    <td class="x3">West</td>
+                    <td class="x4">RitaWest@email.com</td>
+                    <td class="x5">http://www.ritawest.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Youko</td>
+                    <td class="x3">Tucker</td>
+                    <td class="x4">YoukoTucker@email.com</td>
+                    <td class="x5">http://www.youkotucker.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Reina</td>
+                    <td class="x3">Patterson</td>
+                    <td class="x4">ReinaPatterson@email.com</td>
+                    <td class="x5">http://www.reinapatterson.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Nana</td>
+                    <td class="x3">Henry</td>
+                    <td class="x4">NanaHenry@email.com</td>
+                    <td class="x5">http://www.nanahenry.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Ayumi</td>
+                    <td class="x3">Palmer</td>
+                    <td class="x4">AyumiPalmer@email.com</td>
+                    <td class="x5">http://www.ayumipalmer.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Kirk</td>
+                    <td class="x3">Crawford</td>
+                    <td class="x4">KirkCrawford@email.com</td>
+                    <td class="x5">http://www.kirkcrawford.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Miwa</td>
+                    <td class="x3">Robinson</td>
+                    <td class="x4">MiwaRobinson@email.com</td>
+                    <td class="x5">http://www.miwarobinson.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Emily</td>
+                    <td class="x3">Lee</td>
+                    <td class="x4">EmilyLee@email.com</td>
+                    <td class="x5">http://www.emilylee.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Harvey</td>
+                    <td class="x3">Gibson</td>
+                    <td class="x4">HarveyGibson@email.com</td>
+                    <td class="x5">http://www.harveygibson.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Mieko</td>
+                    <td class="x3">Hunt</td>
+                    <td class="x4">MiekoHunt@email.com</td>
+                    <td class="x5">http://www.miekohunt.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Franklin</td>
+                    <td class="x3">Harrison</td>
+                    <td class="x4">FranklinHarrison@email.com</td>
+                    <td class="x5">http://www.franklinharrison.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Bonnie</td>
+                    <td class="x3">Sullivan</td>
+                    <td class="x4">BonnieSullivan@email.com</td>
+                    <td class="x5">http://www.bonniesullivan.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Hitomi</td>
+                    <td class="x3">Jones</td>
+                    <td class="x4">HitomiJones@email.com</td>
+                    <td class="x5">http://www.hitomijones.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Isaac</td>
+                    <td class="x3">Kennedy</td>
+                    <td class="x4">IsaacKennedy@email.com</td>
+                    <td class="x5">http://www.isaackennedy.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Michiyo</td>
+                    <td class="x3">Daniels</td>
+                    <td class="x4">MichiyoDaniels@email.com</td>
+                    <td class="x5">http://www.michiyodaniels.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Walter</td>
+                    <td class="x3">Hamilton</td>
+                    <td class="x4">WalterHamilton@email.com</td>
+                    <td class="x5">http://www.walterhamilton.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Patty</td>
+                    <td class="x3">Crawford</td>
+                    <td class="x4">PattyCrawford@email.com</td>
+                    <td class="x5">http://www.pattycrawford.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Chantal</td>
+                    <td class="x3">Coleman</td>
+                    <td class="x4">ChantalColeman@email.com</td>
+                    <td class="x5">http://www.chantalcoleman.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Stan</td>
+                    <td class="x3">Cruz</td>
+                    <td class="x4">StanCruz@email.com</td>
+                    <td class="x5">http://www.stancruz.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Kazuko</td>
+                    <td class="x3">Stewart</td>
+                    <td class="x4">KazukoStewart@email.com</td>
+                    <td class="x5">http://www.kazukostewart.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                
+                <tr>
+                    <td class="x1"><input type="checkbox" /></td>
+                    <td class="x2">Iris</td>
+                    <td class="x3">Ramos</td>
+                    <td class="x4">IrisRamos@email.com</td>
+                    <td class="x5">http://www.irisramos.com</td>
+                    <td class="x6"><button class="btn btn-default btn-xs">edit</button></td>
+                </tr>
+                           </tbody>
+    	</table>
+    	</article>
+        
+    </div>
+	
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.13.3/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="scrollTable.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function () {
+    
+	var table = $('#table');
+	initScrollTable();
+	table.tablesorter({
+		headers: { 
+			0: { sorter: false }
+		}
+	});
+	
+	
+	sizeArticle();
+	
+	var id = 0;
+	$(window).resize(function () {
+		clearTimeout(id);
+		id = setTimeout(sizeArticle, 200);
+	});	
+	
+	function sizeArticle() {
+		var article = $('article');
+		article.height($(window).height() - article.offset().top - 20);
+	};
+	
+	function initScrollTable() {
+		table.scrollTable({
+			bordered: true,
+			height: '100%'
+		});
+	};
+	
+	$('#methods button').on('click', function() {
+		var method = $(this).text();
+		if(method == "destroy") {
+			table.scrollTable('destroy');
+		}
+		else {
+			initScrollTable();
+		}
+    });
+
+	$('#showRows button').click(function(e) {
+        var $this = $(this),
+			val = $this.text();
+		$this.addClass('active').siblings().removeClass('active');
+		$('#table').find('tbody tr').each(function(index, element) {
+            if(index >= val) {
+				$(this).hide();
+			}
+			else {
+				$(this).show();
+			}
+        });
+		table.scrollTable('resize');		
+    });
+	
+	$('#hideSidebar').click(function(e) {
+		$('aside').toggle();
+		$('article').toggleClass('col-md-8').toggleClass('col-md-12');
+		$(this).text($(this).text() == "Hide Sidebar" ? "Show Sidebar" : "Hide Sidebar");
+		sizeArticle();
+		table.scrollTable('resize');
+	});
+	
+	$('#showHeader').click(function(e) {
+		$('header').toggle();
+		$(this).text($(this).text() == "Hide Header" ? "Show Header" : "Hide Header");
+		sizeArticle();
+	});
+	
+	$('.toggleAll').click(function() {
+		table.find('tbody input').prop('checked', this.checked);
+		$('.toggleAll').prop('checked', this.checked);
+	});
+	
+	$('.btn-group button').click(function(e) {
+        $(this).siblings().removeClass('active');
+		$(this).addClass('active');
+    });
+	
+	
+});
+
+</script>
+
+</body>
+
+</html>
