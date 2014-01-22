@@ -1,3 +1,7 @@
+/*
+scrollTable v1.0
+https://github.com/x2gboye/scrollTable
+*/
 ;(function ($) {
 
     var defaults = {
